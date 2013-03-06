@@ -15,7 +15,7 @@ def divide(a, b):
     return a / b
 
 print "Let's do some math with just functions!"
-
+o
 age = add(30, 5)
 height = subtract(78, 4)
 weight = multiply(90, 2)
