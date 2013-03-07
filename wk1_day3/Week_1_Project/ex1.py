@@ -23,15 +23,9 @@ for f in folders:
 
     for filename in files:
         if filename.startswith(f):
-            if os.path.exists("/home/user/src/wk1_day3/Week_1_Project/" + f + "/"):
-                shutil.copy2("original_files/files/" + filename,
-                    "/home/user/src/wk1_day3/Week_1_Project/" + f + "/")
+            
+            if not os.path.exists("Week_1_Project/" + f):
+                os.makedirs("Week_1_Project/" + f)
+            
             else:
-                shutil.move("original_files/files/" + filename, "/home/user/src/wk1_day3/Week_1_Project/" + f + "/")
-
-# Change the current working directory to path.
-# os.chdir(path)
-
-#shutil.move(src, dst)
-
-# os.chdir("/home/user/src/wk1_day3/Week_1_Project/a")
+                shutil.copy2("original_files/files/" + filename,"Week_1_Project/" + f)
